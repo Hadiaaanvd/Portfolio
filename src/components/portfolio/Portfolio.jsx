@@ -1,112 +1,107 @@
-import React from 'react';
-import IMG1 from '../../assets/alc.png';
-import IMG2 from '../../assets/todo.png';
-import IMG3 from '../../assets/shelter.png';
-import IMG4 from '../../assets/fake.png';
-import IMG5 from '../../assets/news.png';
-import IMG6 from '../../assets/math.png';
+import React from "react";
+import IMG1 from "../../assets/innovative/page1.jpeg";
+import IMG2 from "../../assets/innovative/page2.jpeg";
+import IMG3 from "../../assets/innovative/page3.png";
+import IMG4 from "../../assets/egility/page1.png";
+import IMG5 from "../../assets/egility/page2.png";
+import IMG6 from "../../assets/egility/page3.png";
+import IMG7 from "../../assets/egility/page4.png";
+import IMG8 from "../../assets/infaque/page1.png";
+import IMG9 from "../../assets/infaque/page2.png";
+import IMG10 from "../../assets/infaque/page3.png";
+import IMG11 from "../../assets/infaque/page4.png";
+import IMG12 from "../../assets/forge/page1.png";
+import IMG13 from "../../assets/forge/page2.png";
+import IMG14 from "../../assets/forge/page3.png";
+import IMG15 from "../../assets/1155/page1.png";
+import IMG16 from "../../assets/1155/page2.png";
+import IMG17 from "../../assets/1155/page3.png";
+import IMG18 from "../../assets/1155/page4.png";
+import IMG19 from "../../assets/innovative/page4.png";
+import IMG20 from "../../assets/financial/page1.png";
+import IMG21 from "../../assets/financial/page2.png";
+import IMG22 from "../../assets/web/1.png";
+import IMG23 from "../../assets/web/2.png";
+import IMG24 from "../../assets/web/3.png";
+import IMG25 from "../../assets/web/4.png";
 
-import './portfolio.css';
+import "./portfolio.css";
+import Projects from "../projects/Projects";
 
 const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: 'Adventist Learning Center',
-      img: IMG1,
+      title: "Innovative Mojo",
+      img: [IMG1, IMG2, IMG3, IMG19],
       description:
-        'Adventist Learning Center provides quality education to Syrian and Kurdish Refugees living in Beirut, Lebanon. This simple website was built to reach a bigger audience and ease the process of gathering donations for the ALC students.',
-      technologies: 'Ruby on Rails | SCSS',
-      link: 'https://adventistlearningcenter-257375ab1970.herokuapp.com/',
-      github: 'https://github.com/Meri-MG/school',
+        "Developed an engaging and interactive website for Innovative Mojo, a startup specializing in development services. This freelance project primarily focused on frontend development, made using React. It also had an admin panel, allowing for effortless management of articles, including adding, removing, and editing functionalities. They also had very specific requirements for amimations.",
+      technologies: "Ruby on Rails | SCSS",
+      link: "https://innovativemojo.com/",
+    },
+  
+
+    {
+      id: 3,
+      title: "Infaque",
+      img: [IMG8, IMG11, IMG9, IMG10],
+      description:
+        "Contributed a great deal to the development of Infaque's flagship SaaS product, designed specifically for charities. This solution streamlines the process of fund collection and distribution across various campaigns and causes, providing a seamless experience for users. The project showcases my proficiency in creating SaaS platforms that cater to specific sector needs.",
+      link: "https://infaque.com/",
     },
     {
       id: 2,
-      title: 'FakeStore',
-      img: IMG4,
+      title: "Forge One",
+      img: [IMG13, IMG12, IMG14],
       description:
-        'FakeStore app that provides information about available products and their details',
-      technologies: 'React | Redux',
-      link: 'https://fakestore-metrics.netlify.app/',
-      github: 'https://github.com/Meri-MG/Fakestore---react',
-    },
-    {
-      id: 3,
-      title: 'To-Do App',
-      img: IMG2,
-      description: 'User friendly app to plan your day and manage tasks',
-      technologies: 'JavaScript | Webpack',
-      link: 'https://meri-mg.github.io/To-Do-List/dist/',
-      github: 'https://github.com/Meri-MG/To-Do-List',
-    },
-    {
-      id: 4,
-      title: 'Shelter',
-      img: IMG3,
-      description:
-        'Fully responsive interactive website built based on Figma design',
-      technologies: 'JavaScript | CSS',
-      link: 'https://meri-mg.github.io/shelter/pages/main/index.html',
-      github: 'https://github.com/Meri-MG/shelter',
+        "Executed a frontend development project for Forge1, focusing on translating pixel-perfect designs into a responsive website using React. This freelance project emphasized my attention to detail and skill in creating visually appealing and functional web interfaces.",
+      link: "https://forge-one.web.app/",
     },
     {
       id: 5,
-      title: 'World News',
-      img: IMG5,
+      title: "1155 Family of companies",
+      img: [IMG15, IMG18, IMG16, IMG17],
       description:
-        'Fully responsive interactive website built based on Adobe XD design',
-      technologies: 'JavaScript | CSS',
-      link: 'https://meri-mg.github.io/Unilab-world-news/',
-      github: 'https://github.com/Meri-MG/Unilab-world-news',
+        "Undertook multiple projects for the 1155 family of companies, including Diversified, 1155, and Players. The task involved updating and transitioning their websites from WordPress to React. These freelance projects required a keen understanding of diverse business needs and the ability to deliver modern, responsive web solutions.",
+      link: "https://pr-1155.web.app/",
+    },
+
+    {
+      id: 2,
+      title: "Web Engineering Seminar (Master's Project) ",
+      img: [IMG23, IMG22, IMG24, IMG25],
+      description:
+        "This project analyzed five years of web engineering research, highlighting trends in affiliations, authors, technologies, and countries. I developed an interactive web dashboard in React to visualize these insights with dynamic charts and filters. The dashboard allows users to explore evolving trends and key research contributions intuitively.",
+      technologies: "Next",
+      link: "https://web-engineering-analysis.web.app/",
     },
     {
-      id: 6,
-      title: 'Math Resource',
-      img: IMG6,
+      id: 4,
+      title: "Egility",
+      img: [IMG4, IMG5, IMG6, IMG7],
       description:
-        'Real-world group project which is still in progress and will provide educational platform for future young developers',
-      technologies: 'JavaScript | Scss | Python',
-      link: 'https://lukinoo.github.io/math-resource/',
-      github: 'https://github.com/lukinoo/math-resource',
+        "Developed a sophisticated recruiting tool for a Canadian company, leveraging Humantic and Receptiviti apis for candidate assessment. The tool features advanced visual representations of candidate data and comparisons, utilizing highcharts.js and React. This project highlights my expertise in integrating complex data analytics and visualization.",
+      technologies: "JavaScript | CSS",
+      link: "https://egility-production.web.app/",
+    },
+
+    {
+      id: 6,
+      title: "Financial Accumen",
+      img: [IMG20, IMG21],
+      description:
+        "Created a user-friendly SaaS solution for Canadian companies, simplifying the process of accessing QuickBooks records. This tool stands out for its ease of use and its ability to cater to the specific accounting needs of different businesses, demonstrating my capability in developing tailored financial software solutions.",
+      link: "https://financial-acumen-dev.web.app/SignIn",
     },
   ];
 
   return (
-    <section id="portfolio">
+    <section id="portfolio" className="container">
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio__container">
-        {soloProjects.map((pro) => (
-          <article className="portfolio__item" key={pro.id}>
-            <div className="portfolio__item-image">
-              <img src={pro.img} alt={pro.title} />
-            </div>
-            <div className="portfolio__item-content">
-              <h3>{pro.title}</h3>
-              <p>{pro.description}</p>
-              <p>{pro.technologies}</p>
-            </div>
-            <div className="portfolio__item-cta">
-              <a
-                href={pro.github}
-                target="_blank"
-                className="btn"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Visit Website
-              </a>
-            </div>
-          </article>
-        ))}
+      <div className="portfolio__container">
+        <Projects projects={soloProjects} />
       </div>
     </section>
   );
