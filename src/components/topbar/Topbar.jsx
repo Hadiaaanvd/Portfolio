@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiServiceLine } from "react-icons/ri";
 import { BiBook } from "react-icons/bi";
@@ -18,13 +19,9 @@ const Topbar = () => {
       >
         <AiOutlineHome />
       </a>
-      <a
-        href="#portfolio"
-        onClick={() => setActiveNav("#portfolio")}
-        className={activeNav === "#portfolio" ? "active" : ""}
-      >
+      <Link to="/projects">
         <RiServiceLine />
-      </a>
+      </Link>
       <a
         href="#experience"
         onClick={() => setActiveNav("#experience")}

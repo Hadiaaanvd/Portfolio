@@ -4,6 +4,18 @@
   gap: 2.5rem;
 }
 
+.portfolio__view-all {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.portfolio__view-all:hover {
+  color: var(--color-accent);
+}
+
 .portfolio__content {
   padding: 20px;
 }

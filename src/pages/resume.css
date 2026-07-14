@@ -1,28 +1,10 @@
 .resume-page {
   height: 100vh;
   height: 100dvh;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.resume-page__bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.2rem;
-  flex-shrink: 0;
-}
-
-.resume-page__back {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--color-text);
-}
-
-.resume-page__back:hover {
-  color: var(--color-accent);
 }
 
 .resume-viewer {

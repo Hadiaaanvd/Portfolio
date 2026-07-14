@@ -16,7 +16,7 @@ const HeaderSocials = () => {
       >
         <BsLinkedin />
       </a>
-      <a href="https://github.com/Hadiaanvd" target="_blank" rel="noreferrer">
+      <a href="https://github.com/Hadiaaanvd" target="_blank" rel="noreferrer">
         <FaGithub />
       </a>
     </div>
