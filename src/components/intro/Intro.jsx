@@ -12,12 +12,16 @@ const Intro = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <FaAward className="about__icon" />
+              <span className="about__icon-wrap">
+                <FaAward className="about__icon" />
+              </span>
               <h5>Experience</h5>
               <small>2+ year</small>
             </article>
             <article className="about__card">
-              <VscFolderLibrary className="about__icon" />
+              <span className="about__icon-wrap">
+                <VscFolderLibrary className="about__icon" />
+              </span>
               <h5>Projects</h5>
               <small>10+ Completed Projects</small>
             </article>

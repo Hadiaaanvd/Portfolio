@@ -6,17 +6,30 @@ header {
   overflow: hidden;
   position: relative;
   padding: calc(5% + 20px);
+}
 
-}
 .about__me {
-  width: 31%;
+  width: 34%;
+  position: relative;
 }
+
+.about__me::before {
+  content: "";
+  position: absolute;
+  inset: -1.2rem;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  border-radius: calc(var(--radius-lg) + 0.6rem);
+  opacity: 0.15;
+  z-index: -1;
+}
+
 .about__me img {
   object-fit: cover;
-  border-radius: 2rem;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   width: 100%;
-
+  box-shadow: var(--shadow-lg);
+  border: 6px solid var(--color-surface);
 }
 
 .header__container {
@@ -30,8 +43,17 @@ header {
   margin-right: 20px;
 }
 
-.header__content p{
-  font-size: 1.2rem;
+.header__content h5 {
+  color: var(--color-accent);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.header__content p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-top: 1rem;
 }
 
 .cta {
@@ -46,14 +68,33 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
+}
+
+.header__socials a {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary);
+}
+
+.header__socials a:hover {
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .header__socials::after {
   content: "";
   width: 1px;
   height: 2rem;
-  background: var(--color-primary);
+  background: var(--color-border);
 }
 
 .scroll__down {
@@ -61,8 +102,9 @@ header {
   right: 5rem;
   bottom: 5rem;
   transform: rotate(90deg);
-  font-weight: 300;
-  font-size: 0.9rem;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
 }
 
 @media screen and (max-width: 1024px) {
@@ -81,6 +123,9 @@ header {
 }
 
 @media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+  }
   .header__container {
     flex-wrap: wrap;
     justify-content: center;
@@ -89,10 +134,24 @@ header {
   }
   .header__content {
     min-width: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
+    text-align: center;
+  }
+  .header__socials {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .header__socials::after {
+    display: none;
   }
   .about__me {
     min-width: 100%;
+    width: 50%;
+    margin: 0 auto;
   }
   .about__me img {
     width: 75%;
@@ -103,12 +162,10 @@ header {
   #home {
     padding: 30px 0;
   }
-  .header__socials {
-    width: 20px;
-    top: 30px;
-    left: 90%;
-  }
   .scroll__down {
     display: none;
+  }
+  .about__me {
+    width: 70%;
   }
 }

@@ -13,56 +13,68 @@
   margin-bottom: 40px;
   min-width: 320px;
   display: flex;
-
   flex-direction: column;
 }
+
 .about__detail {
   min-width: 50%;
   font-size: 16px;
   width: 600px;
   max-width: 100% !important;
 }
+
 .about__card {
   margin-bottom: 20px;
-  background: var(--color-primary-variant);
-  border: 1px solid transparent;
-  border-radius: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   padding: 2rem;
-  height: fit-content;
   height: 200px;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
-.experience__details-icon {
-  color: var(--color-light);
+.about__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
 }
-.about__icon {
-  color: var(--color-light);
-  font-size: 2rem;
+
+.about__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
   margin-bottom: 1rem;
+  background: var(--color-accent-soft);
+  border-radius: 50%;
 }
-h5 {
-  color: var(--color-primary) !important;
+
+.about__icon {
+  color: var(--color-accent);
+  font-size: 1.6rem;
 }
 
 .about__cards h5 {
   font-size: 1rem;
-  color: var(--color-light) !important;
+  color: var(--color-primary) !important;
+  margin-top: 0.2rem;
 }
 
 .about__card small {
   font-size: 0.9rem;
-  color: var(--color-light);
+  color: var(--color-text-light);
 }
 
 .about__content p {
   margin: 0 0 1.5rem;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 @media screen and (max-width: 1140px) {

@@ -11,6 +11,7 @@
   justify-content: center;
   min-height: 90vh;
 }
+
 .contact__options {
   display: flex;
   flex-direction: column;
@@ -19,44 +20,58 @@
 }
 
 .contact__option {
-  background: var(--color-primary-variant);
-  padding: 1.2rem;
-  border-radius: 1.2rem;
+  background: var(--color-surface);
+  padding: 2rem 1.2rem;
+  border-radius: var(--radius-md);
   text-align: center;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
 .contact__option:hover {
-  background: rgb(45, 45, 45);
-  border-color: var(--color-primary-variant);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.contact__option-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0 auto 0.6rem;
+  background: var(--color-accent-soft);
+  border-radius: 50%;
 }
 
 .contact__option-icon {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--color-accent);
 }
 
 .contact__option a {
   margin-top: 0.7rem;
   display: inline-block;
-  font-size: 0.8rem;
-  color: var(--color-light);
-}
-
-.contact__option h5 {
-  color: var(--color-light) !important;
-}
-.contact__option {
-  color: var(--color-light);
-}
-
-.contact__option h4 {
+  font-size: 0.85rem;
+  color: var(--color-accent);
   font-weight: 500;
 }
 
+.contact__option h5 {
+  color: var(--color-text-light) !important;
+  font-weight: 400;
+}
+
+.contact__option h4 {
+  font-weight: 600;
+  margin: 0.4rem 0;
+}
+
 form span {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--color-accent);
 }
 
 form {
@@ -68,12 +83,26 @@ form {
 input,
 textarea {
   width: 100%;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid var(--color-primary-variant);
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
   resize: none;
-  color: var(--color-primary-variant);
+  color: var(--color-primary);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
 @media screen and (max-width: 1024px) {
