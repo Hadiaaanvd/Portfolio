@@ -27,7 +27,7 @@ const Education = () => {
     <section id="education" className="container">
       <div className="education__grid">
         <div className="education__col">
-          <span className="kicker">cat education.md</span>
+          <span className="kicker">Background</span>
           <h2>Education</h2>
           <div className="education__list">
             {EDUCATION.map((item, i) => (
@@ -44,7 +44,7 @@ const Education = () => {
         </div>
 
         <div className="education__col">
-          <span className="kicker">cat certs.md</span>
+          <span className="kicker">Recognition</span>
           <h2>Certifications</h2>
           <div className="certs__list">
             {CERTIFICATIONS.map((cert, i) => (

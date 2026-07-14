@@ -82,11 +82,10 @@ header {
 }
 
 .header__building-dot {
-  color: var(--color-accent);
-}
-
-.header__building-dot::before {
-  content: ">";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
 }
 
 .cta {
@@ -99,6 +98,33 @@ header {
   display: flex;
   gap: 0.8rem;
   margin-top: 1.8rem;
+}
+
+.header__stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.8rem;
+}
+
+.header__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.header__stat strong {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.header__stat span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
 }
 
 .header__socials a {

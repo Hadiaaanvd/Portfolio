@@ -1,56 +1,71 @@
-.container.testimonials__container {
-    width: 40%;
-    padding-bottom: 4rem;
+.recs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.client__avatar {
-    width: 4rem;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.rec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  transition: var(--transition);
 }
 
-.client__avatar a {
-    font-size: 40px;
-    aspect-ratio: 1/1;
+.rec:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
 }
 
-.testimonial {
-    background: var(--color-bg-variant);
-    text-align: center;
-    padding: 2rem;
-    border-radius: 2rem;
-    user-select: none;
+.rec__quote {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text);
 }
 
-.client__review {
-    color: var(--color-light);
-    font-weight: 300;
-    display: block;
-    width: 90%;
-    margin: 0.8rem auto 0;
+.rec__quote::before {
+  content: "\201C";
+  color: var(--color-accent);
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary);
+.rec__quote::after {
+  content: "\201D";
+  color: var(--color-accent);
 }
 
-@media screen and (max-width: 1024px){
-    .container.testimonials__container {
-        width: 60%;
-    }
+.rec__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
 }
-  
-@media screen and (max-width: 600px){
-    .container.testimonials__container {
-        width: var(--container-width-sm);
-    }
 
-    .client__review {
-        width: var(--container-width-sm);
-    }
+.rec__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.rec__role {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.rec__context {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-accent);
+  margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .recs {
+    grid-template-columns: 1fr;
+  }
 }

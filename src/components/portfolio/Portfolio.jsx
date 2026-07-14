@@ -31,24 +31,6 @@ import Projects from "../projects/Projects";
 const Portfolio = () => {
   const soloProjects = [
     {
-      id: 100,
-      title: "MCP Server @ Staffbase",
-      file: "mcp-server.ts",
-      img: [],
-      description:
-        "Exposed 17 internal APIs as tools AI agents can actually call — now shipping inside Staffbase's customer-facing MCP offering.",
-      tags: ["MCP", "Node.js", "Agentic AI"],
-    },
-    {
-      id: 101,
-      title: "Developer Portal @ Staffbase",
-      file: "dev-portal.tsx",
-      img: [],
-      description:
-        "Owned it end to end — API versioning, federated search, a unified filter component, and the UX fixes nobody assigned but everyone needed.",
-      tags: ["React", "TypeScript", "DX"],
-    },
-    {
       id: 1,
       title: "Innovative Mojo",
       file: "innovative-mojo.jsx",
@@ -128,7 +110,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="container">
-      <span className="kicker">ls ./projects</span>
+      <span className="kicker">My Work</span>
       <h2>Things I shipped</h2>
 
       <div className="portfolio__container">

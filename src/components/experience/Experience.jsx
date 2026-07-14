@@ -36,7 +36,7 @@ const JOBS = [
 const Experience = () => {
   return (
     <section id="experience" className="container">
-      <span className="kicker">git log --oneline</span>
+      <span className="kicker">Career</span>
       <h2>Where I've worked</h2>
       <div className="timeline">
         {JOBS.map((job, i) => (

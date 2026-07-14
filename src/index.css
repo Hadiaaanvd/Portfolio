@@ -50,13 +50,12 @@ body {
   color: var(--color-text);
   line-height: 1.7;
   background-color: var(--color-bg);
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 26px 26px;
 }
 
 .container {
   width: var(--container-width-lg);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -88,13 +87,10 @@ section {
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 0.5rem;
-}
-
-.kicker::before {
-  content: "$ ";
-  color: var(--color-text-muted);
 }
 
 section > h2 {

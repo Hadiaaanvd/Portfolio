@@ -1,84 +1,47 @@
 import React from "react";
-import { BsLinkedin } from "react-icons/bs";
-import { Pagination } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import "./testimonials.css";
 
+const RECOMMENDATIONS = [
+  {
+    name: "Linda Knechtel",
+    role: "Engineering Manager @ Staffbase",
+    context: "Managed Hadia directly",
+    quote:
+      "I had the pleasure of managing Hadia during her time as a working student at Staffbase, and she impressed me with her initiative and technical curiosity. In less than a year, she contributed across multiple domains — from Developer Portal improvements to building an MCP server prototype for Staffbase's public APIs. She didn't wait to be told what to do next — she looked for what needed doing and got it done. Hadia is the kind of engineer who grows fast, takes feedback well, and makes the people around her better.",
+  },
+  {
+    name: "Renishya Jayan",
+    role: "Principal Technical Writer @ Staffbase",
+    context: "Worked with Hadia on the same team",
+    quote:
+      "I had the pleasure of working closely with Hadia for almost a year on usability improvements for the Staffbase Developer Portal. She's friendly, thoughtful, and highly collaborative — she consistently went beyond the task brief, asked the right questions, and suggested better approaches that improved the final outcome. Hadia combines strong web development skills with product thinking and a collaborative mindset.",
+  },
+  {
+    name: "Eric Whitaker",
+    role: "CEO, Innovative MOJO",
+    context: "Hadia's client",
+    quote:
+      "I had the pleasure of collaborating with Hadia on several key projects as a freelance React.js developer, and I can't recommend her highly enough. Her technical skills are top-notch — she brings a deep understanding of React and modern web development practices, paired with a creative and efficient approach to problem-solving. Beyond her technical prowess, Hadia is a joy to work with: positive, collaborative, and committed to deadlines.",
+  },
+];
+
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      link: "https://www.linkedin.com/in/uzairali19/",
-      name: "Uzair Ali",
-      role: "Full-Stack Web Developer. JavaScript | Rails | React | Redux. Improving open-source projects, one commit at a time.",
-      test: "As a developer and a problem solver, I think Meri is a great collaborative partner to have. I met Meri in some basic javascript & react projects and since then she has drastically progressed in her understanding of the development process. She always has a professional environment and has good audio and video quality which makes it easier to communicate with her.",
-    },
-    {
-      id: 2,
-      link: "https://www.linkedin.com/in/yishak-wesego/",
-      name: "Yishak Wesego",
-      role: "Full-stack developer | Technical Support Engineer at Microverse",
-      test: "It was a pleasure collaborating with Meri on different projects. One of the things that I think is special about her is that she never settles, even after completing the projects she finds other resources and strengthens her knowledge. Collaborating with her is easy and comfortable, it's like working with someone you've known for a long period of time.",
-    },
-    {
-      id: 3,
-      link: "https://www.linkedin.com/in/akuu-khan/",
-      name: "akbar (Aku) Khan",
-      role: "Full Stack Developer| Ruby on Rails | PostgreSQL | JavaScript | React | Redux | Html&Css | Python.",
-      test: "I worked with Meri in the same team and her communication skills are very strong. Her programming skill is one of the bests, given the time frame in the field. She is a good team player.  She will probably fit in most of the companies not only because she's a good team worker, but also because she has very good skills and I know she has much more potential to be shown.",
-    },
-    {
-      id: 4,
-      link: "https://www.linkedin.com/in/isaicespedes/",
-      name: "Isai Céspedes",
-      role: "Full-Stack Web Developer. JavaScript | Rails | React | Redux.",
-      test: "I mentored Meri some months ago, and I can say that she is one of those people that you love to work with. She was always interested in what I was trying to teach her, paying attention and always asking questions if something was not clear. When it comes to professional skills, she is really committed to work, always doing her best and going beyond the requirements of the project she's building.",
-    },
-    {
-      id: 5,
-      link: "https://www.linkedin.com/in/hamzaalitarar/",
-      name: "Hamza Tarar",
-      role: "Software Developer",
-      test: "Throughout all our collaborations, Meri has always conducted herself politely and kindly. She comes across as someone that's always willing to help and puts the team ahead of herself. But beneath this, I see a strength and determination to distinguish herself. She's not only someone I highly recommend but is also someone I greatly respect.",
-    },
-    {
-      id: 6,
-      link: "https://www.linkedin.com/in/rex9/",
-      name: "Htet (Rex) Naing",
-      role: "Full Stack Developer | Mindful Mentor | Cheerful Team Player",
-      test: "Meri is really cheerful and supportive person. I know her when she reviewed my resume. Her feedback was so crystal clear and super effective for me. After that, even though she has no responsibility of reviewing my resume again. She helped me patiently when I ask her again and again. Meri is gifted in reviewing the work and giving advice to others. I feel really lucky to have her as the reviewer of my resume.",
-    },
-  ];
   return (
-    <section id="testmonials">
-      <h5>Feedback from my peers</h5>
-      <h2>Testimonials</h2>
-      <Swiper
-        className="container testimonials__container"
-        modules={[Pagination]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-      >
-        {testimonials.map((test, i) => (
-          <SwiperSlide className="testimonial" key={i}>
-            <div className="client__avatar">
-              <a href={test.link}>
-                <BsLinkedin />
-              </a>
+    <section id="testimonials" className="container">
+      <span className="kicker">What people say</span>
+      <h2>Recommendations</h2>
+      <div className="recs">
+        {RECOMMENDATIONS.map((rec, i) => (
+          <article className="rec" key={i}>
+            <p className="rec__quote">{rec.quote}</p>
+            <div className="rec__attribution">
+              <span className="rec__name">{rec.name}</span>
+              <span className="rec__role">{rec.role}</span>
+              <span className="rec__context">{rec.context}</span>
             </div>
-            <h5 className="client__name">{test.name}</h5>
-            <small className="client__review">{test.test}</small>
-          </SwiperSlide>
+          </article>
         ))}
-      </Swiper>
+      </div>
     </section>
   );
 };

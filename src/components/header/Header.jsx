@@ -17,7 +17,7 @@ const Header = () => {
 
       <div className="header__container container">
         <div className="header__content">
-          <span className="kicker">whoami</span>
+          <span className="kicker">Hello, I'm</span>
           <h1>
             Hadia
             <br />
@@ -39,6 +39,16 @@ const Header = () => {
           </span>
           <CTA />
           <HeaderSocials />
+          <div className="header__stats">
+            <div className="header__stat">
+              <strong>3+</strong>
+              <span>years experience</span>
+            </div>
+            <div className="header__stat">
+              <strong>10+</strong>
+              <span>projects shipped</span>
+            </div>
+          </div>
         </div>
         <div className="about__me">
           <div className="terminal-window">
@@ -46,7 +56,7 @@ const Header = () => {
               <span className="terminal-dot terminal-dot--red"></span>
               <span className="terminal-dot terminal-dot--yellow"></span>
               <span className="terminal-dot terminal-dot--green"></span>
-              <span className="terminal-window__title">hadia.exe — running</span>
+              <span className="terminal-window__title">profile.jpg</span>
             </div>
             <img src={ME} alt="Hadia Naveed" />
           </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
+import { BiBook } from "react-icons/bi";
+import { FaQuoteLeft } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
 
 import "./topbar.css";
@@ -19,11 +19,11 @@ const Topbar = () => {
         <AiOutlineHome />
       </a>
       <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
-        className={activeNav === "#about" ? "active" : ""}
+        href="#portfolio"
+        onClick={() => setActiveNav("#portfolio")}
+        className={activeNav === "#portfolio" ? "active" : ""}
       >
-        <AiOutlineUser />
+        <RiServiceLine />
       </a>
       <a
         href="#experience"
@@ -33,11 +33,11 @@ const Topbar = () => {
         <BiBook />
       </a>
       <a
-        href="#portfolio"
-        onClick={() => setActiveNav("#portfolio")}
-        className={activeNav === "#portfolio" ? "active" : ""}
+        href="#testimonials"
+        onClick={() => setActiveNav("#testimonials")}
+        className={activeNav === "#testimonials" ? "active" : ""}
       >
-        <RiServiceLine />
+        <FaQuoteLeft />
       </a>
       <a
         href="#contact"

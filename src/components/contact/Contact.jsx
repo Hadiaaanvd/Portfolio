@@ -31,7 +31,7 @@ const Contact = () => {
     <section id="contact" className="contact-cta">
       <div className="container contact__container">
         <div className="contact__intro">
-          <span className="kicker">contact --hadia</span>
+          <span className="kicker">Get In Touch</span>
           <h2 className="contact__headline">
             Let's build something
             <br />
