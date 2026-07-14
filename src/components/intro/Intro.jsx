@@ -5,10 +5,10 @@ import "./intro.css";
 
 const Intro = () => {
   return (
-    <section id="about">
-      <h5>Get to know</h5>
+    <section id="about" className="container">
+      <span className="kicker">cat about.md</span>
       <h2>About Me</h2>
-      <div className="container about__container">
+      <div className="about__container">
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
@@ -16,7 +16,7 @@ const Intro = () => {
                 <FaAward className="about__icon" />
               </span>
               <h5>Experience</h5>
-              <small>2+ year</small>
+              <small>3+ years</small>
             </article>
             <article className="about__card">
               <span className="about__icon-wrap">
@@ -65,6 +65,9 @@ const Intro = () => {
             </p>
 
             <p>
+              These days, most of that curiosity is pointed at AI infrastructure: building
+              MCP servers, wiring up agentic workflows, and figuring out how tools like
+              Claude Code fit into a real engineering workflow rather than just a demo.
               I'm grateful for every step of this journey, and I’m looking
               forward to continuing it with humility and curiosity. Let's
               connect and create a future full of possibilities together.

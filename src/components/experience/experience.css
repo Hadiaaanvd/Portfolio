@@ -1,82 +1,76 @@
-.experience__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 4em !important;
-}
-
-.experience__container > div {
-  background: var(--color-surface);
-  padding: 2.4rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.experience__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.experience__details {
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 1px solid var(--color-border);
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.9rem 1.1rem;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  color: var(--color-text) !important;
-  transition: var(--transition);
+  flex-direction: column;
+  gap: 2.6rem;
+  max-width: 46rem;
 }
 
-.experience__details:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
+.timeline__item {
+  position: relative;
 }
 
-.experience__details h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
+.timeline__marker {
+  position: absolute;
+  left: -2.44rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.timeline__marker--current {
+  background: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+.timeline__meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.timeline__role {
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.timeline__at {
+  color: var(--color-accent);
   font-weight: 500;
-  color: var(--color-primary);
 }
 
-.experience__details-icon {
-  flex-shrink: 0;
-  color: var(--color-accent) !important;
-  font-size: 1.1rem;
+.timeline__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .experience__container {
-    grid-template-columns: 1fr;
-  }
+.timeline__points li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-  .experience__container > div {
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .experience__content {
-    grid-template-columns: 1fr 1fr;
-  }
+.timeline__points li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
 }
 
 @media screen and (max-width: 600px) {
-  .experience__container {
-    gap: 1rem;
+  .timeline {
+    padding-left: 1.4rem;
   }
 
-  .experience__content {
-    grid-template-columns: 1fr;
-  }
-
-  .experience__container > div {
-    width: 100%;
-    padding: 1.5rem 1rem;
+  .timeline__marker {
+    left: -1.84rem;
   }
 }

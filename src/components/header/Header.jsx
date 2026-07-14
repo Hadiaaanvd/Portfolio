@@ -7,25 +7,49 @@ import "./header.css";
 const Header = () => {
   return (
     <header id="home">
-      <HeaderSocials />
-      <div className="header__container">
+      <div className="header__topbar container">
+        <span className="header__logo">HN_</span>
+        <span className="header__status">
+          <span className="header__status-dot"></span>
+          open to work
+        </span>
+      </div>
+
+      <div className="header__container container">
         <div className="header__content">
-          <h5>Hello I'm</h5>
-          <h1>Hadia Naveed</h1>
-          <h5 className="text-light">Full-stack Developer</h5>
-          <br />
+          <span className="kicker">whoami</span>
+          <h1>
+            Hadia
+            <br />
+            Naveed
+          </h1>
+          <h4 className="header__tagline">
+            I build production <span className="accent">AI infrastructure</span> and agentic
+            systems.
+          </h4>
           <p>
-          Web Developer with almost 3 years of experience building scalable and user-friendly
-web applications using React, TypeScript, Firebase. Proven
-expertise in developing SaaS products and integrating third-party APIs. Passionate about front-end performance
-optimization and user experience. Currently pursuing a Master's in Web
-Engineering and actively seeking opportunities to contribute to innovative web
-solutions.
+            Full-stack developer with almost 3 years of experience shipping scalable web
+            applications, developer tooling, and — more recently — the agentic
+            infrastructure that lets AI actually do things. Currently pursuing a Master's in
+            Web Engineering in Germany.
           </p>
+          <span className="header__building">
+            <span className="header__building-dot"></span>
+            currently building at Staffbase, Germany
+          </span>
           <CTA />
+          <HeaderSocials />
         </div>
         <div className="about__me">
-          <img src={ME} alt="me" />
+          <div className="terminal-window">
+            <div className="terminal-window__bar">
+              <span className="terminal-dot terminal-dot--red"></span>
+              <span className="terminal-dot terminal-dot--yellow"></span>
+              <span className="terminal-dot terminal-dot--green"></span>
+              <span className="terminal-window__title">hadia.exe — running</span>
+            </div>
+            <img src={ME} alt="Hadia Naveed" />
+          </div>
         </div>
       </div>
     </header>

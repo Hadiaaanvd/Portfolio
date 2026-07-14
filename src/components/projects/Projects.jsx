@@ -10,6 +10,7 @@ import { Pagination } from "swiper";
 
 const Projects = ({ projects }) => {
   const navigateToExternalUrl = (url) => {
+    if (!url) return;
     window.open(url, "_blank");
   };
 
@@ -23,27 +24,56 @@ const Projects = ({ projects }) => {
   return (
     <div className="projects-component">
       {projects.map((project, i) => (
-        <div
-          className="project-container"
-          key={i}
-       
-        >
-          <Swiper
-            effect={"fade"}
-            speed={1400}
-            navigation={false}
-            pagination={pagination}
-            modules={[Pagination]}
-          >
-            {project.img.map((x, index) => (
-              <SwiperSlide key={index}>
-                <img  onClick={() => navigateToExternalUrl(project.link)} className="project-image" src={x} alt="" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        <div className="project-container" key={i}>
+          <div className="project-window__bar">
+            <span className="terminal-dot terminal-dot--red"></span>
+            <span className="terminal-dot terminal-dot--yellow"></span>
+            <span className="terminal-dot terminal-dot--green"></span>
+            <span className="project-window__title">{project.file}</span>
+          </div>
+
+          {project.img && project.img.length > 0 ? (
+            <Swiper
+              effect={"fade"}
+              speed={1400}
+              navigation={false}
+              pagination={pagination}
+              modules={[Pagination]}
+            >
+              {project.img.map((x, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    onClick={() => navigateToExternalUrl(project.link)}
+                    className="project-image"
+                    src={x}
+                    alt=""
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="project-placeholder">
+              <span className="project-placeholder__glyph">{"</>"}</span>
+            </div>
+          )}
+
           <div className="project-details">
-            <div onClick={() => navigateToExternalUrl(project.link)} className="title">{project.title}</div>
-            {project.description}
+            <div
+              onClick={() => navigateToExternalUrl(project.link)}
+              className={`title ${project.link ? "title--link" : ""}`}
+            >
+              {project.title}
+            </div>
+            <p>{project.description}</p>
+            {project.tags && (
+              <div className="project-tags">
+                {project.tags.map((tag, t) => (
+                  <span className="project-tag" key={t}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}

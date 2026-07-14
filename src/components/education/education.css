@@ -1,0 +1,91 @@
+.education__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.education__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education__item:last-child {
+  border-bottom: none;
+}
+
+.education__grade {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.education__item h5 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.education__item p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.education__date {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.certs__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.certs__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.certs__item:last-child {
+  border-bottom: none;
+}
+
+.certs__item h5 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.certs__issuer {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.certs__date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+  .education__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
