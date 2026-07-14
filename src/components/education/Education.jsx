@@ -1,26 +1,6 @@
 import React from "react";
+import { EDUCATION, CERTIFICATIONS } from "../../data/resumeData";
 import "./education.css";
-
-const EDUCATION = [
-  {
-    grade: "1.7",
-    degree: "Masters, Web Engineering",
-    school: "Technical University of Chemnitz, Germany",
-    date: "2024 — 2026",
-  },
-  {
-    grade: "1.1",
-    degree: "Bachelors, Software Engineering",
-    school: "University of Lahore, Pakistan · Silver Medal, 2nd highest CGPA",
-    date: "2016 — 2020",
-  },
-];
-
-const CERTIFICATIONS = [
-  { name: "React 2025", issuer: "HackerRank", date: "Apr 2025" },
-  { name: "Understanding TypeScript", issuer: "Udemy", date: "Apr 2025" },
-  { name: "Amazon WoW Spring Event", issuer: "AWS", date: "" },
-];
 
 const Education = () => {
   return (
