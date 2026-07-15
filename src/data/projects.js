@@ -1,3 +1,7 @@
+import PROFOLYO1 from "../assets/profolyo/page1.png";
+import PROFOLYO2 from "../assets/profolyo/page2.png";
+import ACROSS1 from "../assets/across/page1.png";
+import ACROSS2 from "../assets/across/page2.png";
 import IMG1 from "../assets/innovative/page1.jpeg";
 import IMG2 from "../assets/innovative/page2.jpeg";
 import IMG3 from "../assets/innovative/page3.png";
@@ -29,7 +33,7 @@ export const PROJECTS = [
     id: 8,
     title: "Profolyo",
     file: "profolyo.tsx",
-    img: [],
+    img: [PROFOLYO1, PROFOLYO2],
     description:
       "My own product: a unified tool for your professional presence. Edit your profile once and Profolyo ships a live portfolio site and a print-ready résumé PDF from it, always in sync, with a library of 10+ starting templates.",
     tags: ["Founder", "Product"],
@@ -39,7 +43,7 @@ export const PROJECTS = [
     id: 9,
     title: "Across — eCampus Dashboard",
     file: "across.tsx",
-    img: [],
+    img: [ACROSS1, ACROSS2],
     description:
       "Master's project for the Across Alliance, a 10-university cross-border network: a unified eCampus dashboard giving students and staff one entry point for cross-institutional courses, events, and academic services.",
     tags: ["React", "University Project"],
