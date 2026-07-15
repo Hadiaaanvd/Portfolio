@@ -24,7 +24,11 @@ const Skills = () => {
                 {Icon && <Icon className="skills__icon" />}
                 <h5>{group.label}</h5>
               </div>
-              <p className="skills__list">{group.skills.join("  ·  ")}</p>
+              <ul className="skills__list">
+                {group.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
             </div>
           );
         })}
