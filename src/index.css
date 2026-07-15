@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -24,8 +24,8 @@
   --color-accent-soft: rgba(37, 99, 235, 0.08);
   --color-border: #e2e8f0;
 
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Inter", sans-serif;
+  --font-mono: "Inter", sans-serif;
 
   --transition: all 300ms ease;
 
@@ -72,9 +72,9 @@ h6 {
 
 h1 {
   font-size: 3.4rem;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 section {
