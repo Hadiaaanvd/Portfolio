@@ -10,7 +10,6 @@ import Experience from "./components/experience/Experience";
 import Testimonials from "./components/testimonials/Testimonials";
 import Education from "./components/education/Education";
 import Skills from "./components/skills/Skills";
-import TickerBar from "./components/tickerbar/TickerBar";
 import Resume from "./pages/Resume";
 import ProjectsPage from "./pages/ProjectsPage";
 
@@ -18,7 +17,6 @@ const Home = () => (
   <>
     <Navbar />
     <Header />
-    <TickerBar />
     <Topbar />
     <Portfolio />
     <Skills />

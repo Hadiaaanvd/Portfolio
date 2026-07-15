@@ -43,13 +43,7 @@ const Header = () => {
           </div>
         </div>
         <div className="about__me">
-          <div className="terminal-window">
-            <div className="terminal-window__bar">
-              <span className="terminal-dot terminal-dot--red"></span>
-              <span className="terminal-dot terminal-dot--yellow"></span>
-              <span className="terminal-dot terminal-dot--green"></span>
-              <span className="terminal-window__title">profile.jpg</span>
-            </div>
+          <div className="portrait">
             <img src={ME} alt="Hadia Naveed" />
           </div>
         </div>

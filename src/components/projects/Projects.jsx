@@ -15,13 +15,6 @@ const Projects = ({ projects }) => {
           key={i}
           onClick={() => navigateToExternalUrl(project.link)}
         >
-          <div className="project-window__bar">
-            <span className="terminal-dot terminal-dot--red"></span>
-            <span className="terminal-dot terminal-dot--yellow"></span>
-            <span className="terminal-dot terminal-dot--green"></span>
-            <span className="project-window__title">{project.file}</span>
-          </div>
-
           {project.img && project.img.length > 0 ? (
             <img className="project-image" src={project.img[0]} alt="" />
           ) : (

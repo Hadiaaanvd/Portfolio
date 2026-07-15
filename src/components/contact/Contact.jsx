@@ -31,21 +31,21 @@ const Contact = () => {
     <section id="contact" className="contact-cta">
       <div className="container contact__container">
         <div className="contact__intro">
-          <span className="kicker kicker--dark">Get In Touch</span>
+          <span className="kicker">Get In Touch</span>
           <h2 className="contact__headline">
             Let's build something
             <br />
             worth shipping.
           </h2>
           <div className="contact__links">
-            <a href="mailto:hadiaaanvd@gmail.com" className="btn btn-dark">
+            <a href="mailto:hadiaaanvd@gmail.com" className="btn btn-primary">
               hadiaaanvd@gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/hadia-naveed-b316911b5/"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline-dark"
+              className="btn"
             >
               LinkedIn ↗
             </a>
@@ -71,7 +71,7 @@ const Contact = () => {
             name="message"
             required
           ></textarea>
-          <button type="submit" className="btn btn-dark">
+          <button type="submit" className="btn btn-primary">
             Send Message
           </button>
           {message && <span className="contact__thanks">Thanks, I'll reply ASAP :)</span>}
