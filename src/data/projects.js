@@ -26,6 +26,26 @@ import IMG25 from "../assets/web/4.png";
 
 export const PROJECTS = [
   {
+    id: 8,
+    title: "Profolyo",
+    file: "profolyo.tsx",
+    img: [],
+    description:
+      "My own product: a unified tool for your professional presence. Edit your profile once and Profolyo ships a live portfolio site and a print-ready résumé PDF from it, always in sync, with a library of 10+ starting templates.",
+    tags: ["Founder", "Product"],
+    link: "https://profolyo.me/",
+  },
+  {
+    id: 9,
+    title: "Across — eCampus Dashboard",
+    file: "across.tsx",
+    img: [],
+    description:
+      "Master's project for the Across Alliance, a 10-university cross-border network: a unified eCampus dashboard giving students and staff one entry point for cross-institutional courses, events, and academic services.",
+    tags: ["React", "University Project"],
+    link: "https://across.synapse-tech.de/en",
+  },
+  {
     id: 1,
     title: "Innovative Mojo",
     file: "innovative-mojo.jsx",
