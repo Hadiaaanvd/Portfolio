@@ -1,28 +1,23 @@
 .projects-component {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2.8rem 2rem;
 }
 
 .projects-component .project-container {
   cursor: pointer;
   user-select: none;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   font-size: 14px;
   font-weight: 400 !important;
   color: var(--color-text);
-  border-radius: var(--radius-md);
-  overflow: hidden;
   transition: var(--transition);
 }
 
-.projects-component .project-container:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg, 0 20px 40px -16px rgba(15, 23, 42, 0.16));
-  border-color: var(--color-accent);
+.project-placeholder,
+.project-image {
+  border-radius: var(--radius-md);
 }
 
 .project-placeholder {
@@ -40,8 +35,13 @@
   color: var(--color-text-muted);
 }
 
+.projects-component .project-container:hover .project-image,
+.projects-component .project-container:hover .project-placeholder {
+  opacity: 0.85;
+}
+
 .project-details {
-  padding: 1.1rem 1.2rem 1.3rem;
+  padding: 1rem 0 0;
 }
 
 .projects-component .title {
@@ -52,7 +52,7 @@
   color: var(--color-primary);
 }
 
-.projects-component .title--link:hover {
+.projects-component .project-container:hover .title--link {
   color: var(--color-accent);
 }
 
@@ -70,19 +70,23 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.8rem;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
 }
 
 .project-tag {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--color-text-muted);
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  padding: 0.2rem 0.55rem;
-  border-radius: 2rem;
+}
+
+.project-tag:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.5rem;
+  color: var(--color-border);
 }
 
 .project-image {
@@ -90,6 +94,7 @@
   height: 150px;
   object-fit: cover;
   display: block;
+  transition: var(--transition);
 }
 
 @media screen and (max-width: 1024px) {

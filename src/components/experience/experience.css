@@ -23,8 +23,7 @@
 }
 
 .timeline__marker--current {
-  background: var(--color-accent);
-  box-shadow: 0 0 10px var(--color-accent);
+  background: var(--color-primary);
 }
 
 .timeline__meta {
@@ -40,8 +39,8 @@
 }
 
 .timeline__at {
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .timeline__points {

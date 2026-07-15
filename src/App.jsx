@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Topbar from "./components/topbar/Topbar";
 import Contact from "./components/contact/Contact";
 import Portfolio from "./components/portfolio/Portfolio";
 import Experience from "./components/experience/Experience";
@@ -17,7 +16,6 @@ const Home = () => (
   <>
     <Navbar />
     <Header />
-    <Topbar />
     <Portfolio />
     <Skills />
     <Experience />

@@ -20,7 +20,8 @@ header {
 }
 
 .accent {
-  color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .header__tagline {
@@ -50,7 +51,7 @@ header {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-text-muted);
 }
 
 .cta {
@@ -83,7 +84,7 @@ header {
   font-family: var(--font-display);
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 .header__stat span {
