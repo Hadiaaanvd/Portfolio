@@ -5,7 +5,7 @@ import "./portfolio.css";
 import Projects from "../projects/Projects";
 
 const Portfolio = () => {
-  const featured = PROJECTS.slice(0, 3);
+  const featured = PROJECTS.filter((project) => project.featured);
 
   return (
     <section id="portfolio" className="container">

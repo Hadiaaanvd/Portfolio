@@ -34,6 +34,7 @@ export const PROJECTS = [
     title: "Profolyo",
     file: "profolyo.tsx",
     img: [PROFOLYO1, PROFOLYO2],
+    featured: true,
     description:
       "My own product: a unified tool for your professional presence. Edit your profile once and Profolyo ships a live portfolio site and a print-ready résumé PDF from it, always in sync, with a library of 10+ starting templates.",
     tags: ["Founder", "Product"],
@@ -44,6 +45,7 @@ export const PROJECTS = [
     title: "Across — eCampus Dashboard",
     file: "across.tsx",
     img: [ACROSS1, ACROSS2],
+    featured: true,
     description:
       "Master's project for the Across Alliance, a 10-university cross-border network: a unified eCampus dashboard giving students and staff one entry point for cross-institutional courses, events, and academic services.",
     tags: ["React", "University Project"],
@@ -65,6 +67,7 @@ export const PROJECTS = [
     title: "Infaque",
     file: "infaque.jsx",
     img: [IMG8, IMG11, IMG9, IMG10],
+    featured: true,
     description:
       "Contributed a great deal to the development of Infaque's flagship SaaS product, designed specifically for charities. This solution streamlines the process of fund collection and distribution across various campaigns and causes, providing a seamless experience for users. The project showcases my proficiency in creating SaaS platforms that cater to specific sector needs.",
     tags: ["React", "Firebase", "Node.js"],
