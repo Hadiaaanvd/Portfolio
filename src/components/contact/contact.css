@@ -13,11 +13,11 @@
 }
 
 .contact-cta .kicker.kicker--dark {
-  color: rgba(11, 12, 11, 0.65);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact__headline {
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   text-transform: none;
   font-size: 2.6rem;
   line-height: 1.15;
@@ -36,9 +36,9 @@
   font-weight: 600;
   padding: 0.85rem 1.5rem;
   border-radius: var(--radius-sm);
-  background: var(--color-bg);
+  background: var(--color-on-accent);
   color: var(--color-accent);
-  border: 1.5px solid var(--color-bg);
+  border: 1.5px solid var(--color-on-accent);
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -46,7 +46,7 @@
 }
 
 .contact-cta .btn-dark:hover {
-  color: var(--color-white);
+  color: var(--color-accent-dark);
   transform: translateY(-2px);
 }
 
@@ -57,15 +57,15 @@
   padding: 0.85rem 1.5rem;
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--color-bg);
-  border: 1.5px solid var(--color-bg);
+  color: var(--color-on-accent);
+  border: 1.5px solid var(--color-on-accent);
   display: inline-flex;
   align-items: center;
   transition: var(--transition);
 }
 
 .contact-cta .btn-outline-dark:hover {
-  background: var(--color-bg);
+  background: var(--color-on-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
 }
@@ -81,10 +81,10 @@
   width: 100%;
   padding: 1.1rem 1.3rem;
   border-radius: var(--radius-sm);
-  background: rgba(11, 12, 11, 0.08);
-  border: 1.5px solid rgba(11, 12, 11, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   resize: none;
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   font-family: var(--font-mono);
   font-size: 0.9rem;
   transition: var(--transition);
@@ -92,19 +92,19 @@
 
 .contact__form input::placeholder,
 .contact__form textarea::placeholder {
-  color: rgba(11, 12, 11, 0.55);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .contact__form input:focus,
 .contact__form textarea:focus {
-  border-color: var(--color-bg);
-  background: rgba(11, 12, 11, 0.14);
+  border-color: var(--color-on-accent);
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .contact__thanks {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--color-bg);
+  color: var(--color-on-accent);
 }
 
 @media screen and (max-width: 1024px) {

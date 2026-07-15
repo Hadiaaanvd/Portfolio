@@ -11,17 +11,18 @@
 }
 
 :root {
-  --color-bg: #0b0c0b;
-  --color-surface: #131412;
-  --color-surface-alt: #171815;
-  --color-primary: #f4f4ef;
-  --color-text: #c7c9c2;
-  --color-text-muted: #85887f;
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-surface-alt: #eef1f5;
+  --color-primary: #0f172a;
+  --color-text: #475569;
+  --color-text-muted: #64748b;
   --color-white: #fff;
-  --color-accent: #b5d968;
-  --color-accent-dark: #94b34e;
-  --color-accent-soft: rgba(181, 217, 104, 0.12);
-  --color-border: #26271f;
+  --color-on-accent: #fff;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-accent-soft: rgba(37, 99, 235, 0.08);
+  --color-border: #e2e8f0;
 
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -108,7 +109,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-white);
+  color: var(--color-accent-dark);
 }
 
 .btn {
@@ -136,12 +137,12 @@ a:hover {
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   border-color: var(--color-accent);
 }
 
 .btn-primary:hover {
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   filter: brightness(1.08);
   transform: translateY(-2px);
 }

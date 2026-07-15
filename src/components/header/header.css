@@ -105,7 +105,7 @@ header {
 }
 
 .header__socials a:hover {
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   background: var(--color-accent);
   border-color: var(--color-accent);
 }
