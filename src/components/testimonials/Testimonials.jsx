@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import "./testimonials.css";
 
 const RECOMMENDATIONS = [
@@ -54,7 +55,7 @@ const Testimonials = () => {
       <h2>Recommendations</h2>
 
       <div className="spotlight">
-        <span className="spotlight__mark">”</span>
+        <RiDoubleQuotesL className="spotlight__mark" />
         <p className="spotlight__quote" key={index}>
           {active.quote}
         </p>
