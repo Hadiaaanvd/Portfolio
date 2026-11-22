@@ -17,11 +17,14 @@ header {
 
 .header__content {
   max-width: 54%;
+  animation: header-fade-up 700ms ease both;
 }
 
 .accent {
-  color: var(--color-primary);
-  font-weight: 700;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-accent-dark);
 }
 
 .header__tagline {
@@ -118,6 +121,7 @@ header {
 .portrait {
   border-radius: var(--radius-lg);
   overflow: hidden;
+  animation: header-fade-up 700ms ease 150ms both;
 }
 
 .portrait img {
@@ -125,6 +129,29 @@ header {
   width: 100%;
   aspect-ratio: 4 / 5;
   display: block;
+  transition: transform 500ms ease;
+}
+
+.portrait:hover img {
+  transform: scale(1.04);
+}
+
+@keyframes header-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header__content,
+  .portrait {
+    animation: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {

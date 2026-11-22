@@ -1,11 +1,13 @@
 import React from "react";
 import { JOBS } from "../../data/resumeData";
+import Kicker from "../kicker/Kicker";
+import Reveal from "../reveal/Reveal";
 import "./experience.css";
 
 const Experience = () => {
   return (
-    <section id="experience" className="container">
-      <span className="kicker">Career</span>
+    <Reveal as="section" id="experience" className="container">
+      <Kicker index="03">Career</Kicker>
       <h2>Where I've worked</h2>
       <div className="timeline">
         {JOBS.map((job, i) => (
@@ -23,7 +25,7 @@ const Experience = () => {
           </article>
         ))}
       </div>
-    </section>
+    </Reveal>
   );
 };
 

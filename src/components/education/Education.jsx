@@ -1,13 +1,15 @@
 import React from "react";
 import { EDUCATION, CERTIFICATIONS } from "../../data/resumeData";
+import Kicker from "../kicker/Kicker";
+import Reveal from "../reveal/Reveal";
 import "./education.css";
 
 const Education = () => {
   return (
-    <section id="education" className="container">
+    <Reveal as="section" id="education" className="container">
       <div className="education__grid">
         <div className="education__col">
-          <span className="kicker">Background</span>
+          <Kicker index="04">Background</Kicker>
           <h2>Education</h2>
           <div className="education__list">
             {EDUCATION.map((item, i) => (
@@ -47,7 +49,7 @@ const Education = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 };
 

@@ -12,12 +12,21 @@
   font-size: 14px;
   font-weight: 400 !important;
   color: var(--color-text);
-  transition: var(--transition);
+  transition: transform 300ms ease;
 }
 
+.projects-component .project-container:hover {
+  transform: translateY(-4px);
+}
+
+.project-image-wrap,
 .project-placeholder,
 .project-image {
   border-radius: var(--radius-md);
+}
+
+.project-image-wrap {
+  overflow: hidden;
 }
 
 .project-placeholder {
@@ -33,11 +42,6 @@
   font-family: var(--font-mono);
   font-size: 1.8rem;
   color: var(--color-text-muted);
-}
-
-.projects-component .project-container:hover .project-image,
-.projects-component .project-container:hover .project-placeholder {
-  opacity: 0.85;
 }
 
 .project-details {
@@ -94,7 +98,11 @@
   height: 220px;
   object-fit: cover;
   display: block;
-  transition: var(--transition);
+  transition: transform 500ms ease;
+}
+
+.projects-component .project-container:hover .project-image {
+  transform: scale(1.06);
 }
 
 @media screen and (max-width: 1024px) {

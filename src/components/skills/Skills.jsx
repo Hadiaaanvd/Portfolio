@@ -1,6 +1,8 @@
 import React from "react";
 import { BsStars, BsCodeSlash, BsServer, BsTools } from "react-icons/bs";
 import { SKILL_GROUPS } from "../../data/resumeData";
+import Kicker from "../kicker/Kicker";
+import Reveal from "../reveal/Reveal";
 import "./skills.css";
 
 const ICONS = {
@@ -12,8 +14,8 @@ const ICONS = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="container">
-      <span className="kicker">Toolbox</span>
+    <Reveal as="section" id="skills" className="container">
+      <Kicker index="02">Toolbox</Kicker>
       <h2>Skills</h2>
       <div className="skills__grid">
         {SKILL_GROUPS.map((group) => {
@@ -33,7 +35,7 @@ const Skills = () => {
           );
         })}
       </div>
-    </section>
+    </Reveal>
   );
 };
 

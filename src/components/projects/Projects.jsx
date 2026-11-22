@@ -16,7 +16,9 @@ const Projects = ({ projects }) => {
           onClick={() => navigateToExternalUrl(project.link)}
         >
           {project.img && project.img.length > 0 ? (
-            <img className="project-image" src={project.img[0]} alt="" />
+            <div className="project-image-wrap">
+              <img className="project-image" src={project.img[0]} alt="" />
+            </div>
           ) : (
             <div className="project-placeholder">
               <span className="project-placeholder__glyph">{"</>"}</span>

@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Kicker from "../kicker/Kicker";
+import Reveal from "../reveal/Reveal";
 import "./contact.css";
 
 const Contact = () => {
@@ -28,10 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact-cta">
+    <Reveal as="section" id="contact" className="contact-cta">
       <div className="container contact__container">
         <div className="contact__intro">
-          <span className="kicker">Get In Touch</span>
+          <Kicker index="06">Get In Touch</Kicker>
           <h2 className="contact__headline">
             Let's build something
             <br />
@@ -77,7 +79,7 @@ const Contact = () => {
           {message && <span className="contact__thanks">Thanks, I'll reply ASAP :)</span>}
         </form>
       </div>
-    </section>
+    </Reveal>
   );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import Kicker from "../kicker/Kicker";
+import Reveal from "../reveal/Reveal";
 import "./testimonials.css";
 
 const RECOMMENDATIONS = [
@@ -31,8 +33,8 @@ const initials = (name) =>
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="container">
-      <span className="kicker">What people say</span>
+    <Reveal as="section" id="testimonials" className="container">
+      <Kicker index="05">What people say</Kicker>
       <h2>Recommendations</h2>
 
       <div className="rec-grid">
@@ -50,7 +52,7 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Reveal>
   );
 };
 
