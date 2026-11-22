@@ -107,6 +107,31 @@ section {
   color: var(--color-accent);
 }
 
+.section-number {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .reveal {
+    position: relative;
+  }
+
+  .section-number {
+    display: block;
+    position: absolute;
+    top: -4.75rem;
+    right: 0;
+    font-family: var(--font-serif);
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
 section > h2 {
   text-align: left;
   font-size: 2.1rem;
@@ -135,8 +160,8 @@ a:hover {
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.85rem 1.5rem;
-  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.6rem;
+  border-radius: 3rem;
   cursor: pointer;
   border: 1.5px solid var(--color-border);
   background: var(--color-surface);
@@ -147,6 +172,7 @@ a:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
+  box-shadow: 0 12px 24px -12px rgba(15, 23, 42, 0.18);
 }
 
 .btn-primary {
@@ -159,6 +185,7 @@ a:hover {
   color: var(--color-on-accent);
   filter: brightness(1.08);
   transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px var(--color-accent-soft), 0 12px 24px -12px rgba(37, 99, 235, 0.35);
 }
 
 .reveal {

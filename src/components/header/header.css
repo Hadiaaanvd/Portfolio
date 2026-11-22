@@ -6,7 +6,34 @@ header {
   position: relative;
 }
 
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+header::before {
+  top: -12%;
+  right: -6%;
+  width: 34rem;
+  height: 34rem;
+  background: radial-gradient(circle, var(--color-accent-soft) 0%, transparent 70%);
+}
+
+header::after {
+  bottom: -18%;
+  left: -10%;
+  width: 26rem;
+  height: 26rem;
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.04) 0%, transparent 70%);
+}
+
 .header__container {
+  position: relative;
+  z-index: 1;
   flex: 1;
   display: flex;
   align-items: center;
@@ -21,10 +48,14 @@ header {
 }
 
 .accent {
+  position: relative;
+  display: inline;
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 600;
   color: var(--color-accent-dark);
+  background-image: linear-gradient(transparent 62%, var(--color-accent-soft) 62%);
+  padding: 0 0.1em;
 }
 
 .header__tagline {
