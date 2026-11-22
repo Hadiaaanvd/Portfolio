@@ -42,7 +42,7 @@ export const PROJECTS = [
   },
   {
     id: 9,
-    title: "Across — eCampus Dashboard",
+    title: "Across (eCampus Dashboard)",
     file: "across.tsx",
     img: [ACROSS1, ACROSS2],
     featured: true,

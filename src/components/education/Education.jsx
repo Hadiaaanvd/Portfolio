@@ -19,6 +19,12 @@ const Education = () => {
                   <h5>{item.degree}</h5>
                   <p>{item.school}</p>
                   <span className="education__date">{item.date}</span>
+                  {item.thesis && (
+                    <p className="education__thesis">
+                      <span className="education__thesis-label">{item.thesis.status}</span>{" "}
+                      Thesis: {item.thesis.title} (supervised by {item.thesis.supervisor})
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

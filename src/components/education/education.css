@@ -48,6 +48,26 @@
   color: var(--color-text-muted);
 }
 
+.education__thesis {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.education__thesis-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2rem;
+  margin-right: 0.3rem;
+}
+
 .certs__list {
   display: flex;
   flex-direction: column;

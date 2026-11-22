@@ -21,9 +21,9 @@ const Header = () => {
           </h4>
           <p>
             Full-stack developer with almost 3 years of experience shipping scalable web
-            applications, developer tooling, and — more recently — the agentic
-            infrastructure that lets AI actually do things. Currently pursuing a Master's in
-            Web Engineering in Germany.
+            applications and developer tooling, and more recently the agentic infrastructure
+            that lets AI actually do things. Currently pursuing a Master's in Web Engineering
+            in Germany.
           </p>
           <span className="header__building">
             <span className="header__building-dot"></span>
