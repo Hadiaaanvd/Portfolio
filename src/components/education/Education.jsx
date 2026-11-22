@@ -30,7 +30,15 @@ const Education = () => {
             {CERTIFICATIONS.map((cert, i) => (
               <div className="certs__item" key={i}>
                 <div>
-                  <h5>{cert.name}</h5>
+                  <h5>
+                    {cert.link ? (
+                      <a href={cert.link} target="_blank" rel="noreferrer">
+                        {cert.name} ↗
+                      </a>
+                    ) : (
+                      cert.name
+                    )}
+                  </h5>
                   <span className="certs__issuer">{cert.issuer}</span>
                 </div>
                 {cert.date && <span className="certs__date">{cert.date}</span>}
