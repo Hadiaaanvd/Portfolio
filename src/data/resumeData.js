@@ -46,8 +46,18 @@ export const EDUCATION = [
 ];
 
 export const CERTIFICATIONS = [
-  { name: "React 2025", issuer: "HackerRank", date: "Apr 2025" },
-  { name: "Understanding TypeScript", issuer: "Udemy", date: "Apr 2025" },
+  {
+    name: "React 2025",
+    issuer: "HackerRank",
+    date: "Apr 2025",
+    link: "https://www.hackerrank.com/certificates/85cce3f1ffc9",
+  },
+  {
+    name: "Understanding TypeScript",
+    issuer: "Udemy",
+    date: "Apr 2025",
+    link: "https://www.udemy.com/certificate/UC-699a5b35-af18-4f4c-9cad-45ead5fb0564/",
+  },
   { name: "Amazon WoW Spring Event", issuer: "AWS", date: "" },
   {
     name: "The Complete Agentic AI Engineering Course",
