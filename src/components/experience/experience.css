@@ -1,141 +1,109 @@
-.exp-switcher {
-  display: grid;
-  grid-template-columns: 13rem 1fr;
-  gap: 2.5rem;
-  max-width: 50rem;
-}
-
-.exp-tabs {
+.exp-list {
+  position: relative;
+  max-width: 42rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  border-left: 2px solid var(--color-border);
+  gap: 3.2rem;
 }
 
-.exp-tab {
-  text-align: left;
-  padding: 0.85rem 1.2rem;
-  margin-left: -2px;
-  border-left: 2px solid transparent;
+.exp-entry {
+  position: relative;
+}
+
+.exp-entry__marker {
+  position: absolute;
+  left: -2.44rem;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.exp-entry__marker--current {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.exp-entry__role {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-entry__byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  transition: var(--transition);
+  font-size: 0.82rem;
 }
 
-.exp-tab:hover {
-  color: var(--color-primary);
-  background: var(--color-surface);
-}
-
-.exp-tab--active {
+.exp-entry__company {
   color: var(--color-accent);
-  border-left-color: var(--color-accent);
-  background: var(--color-accent-soft);
   font-weight: 600;
 }
 
-.exp-panel {
-  animation: exp-fade 350ms ease both;
-}
-
-.exp-panel__role {
-  font-size: 1.2rem;
-}
-
-.exp-panel__at {
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-
-.exp-panel__meta {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin: 0.5rem 0 1.4rem;
-}
-
-.exp-panel__date {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+.exp-entry__location,
+.exp-entry__date {
   color: var(--color-text-muted);
 }
 
-.exp-panel__badge {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+.exp-entry__location::before,
+.exp-entry__date::before {
+  content: "·";
+  margin-right: 0.6rem;
+  color: var(--color-border);
+}
+
+.exp-entry__badge {
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-size: 0.68rem;
   color: var(--color-accent);
   background: var(--color-accent-soft);
   padding: 0.2rem 0.55rem;
   border-radius: 2rem;
 }
 
-.exp-panel__points {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.exp-panel__points li {
-  position: relative;
-  padding-left: 1.1rem;
+.exp-entry__summary {
+  font-size: 1.02rem;
+  line-height: 1.75;
   color: var(--color-text);
-  font-size: 0.98rem;
-  line-height: 1.65;
+  max-width: 38rem;
 }
 
-.exp-panel__points li::before {
-  content: "-";
-  position: absolute;
-  left: 0;
+.exp-entry__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.exp-entry__highlights li {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 2rem;
 }
 
-@keyframes exp-fade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .exp-panel {
-    animation: none;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .exp-switcher {
-    grid-template-columns: 1fr;
-    gap: 0;
+@media screen and (max-width: 600px) {
+  .exp-list {
+    padding-left: 1.4rem;
   }
 
-  .exp-tabs {
-    flex-direction: row;
-    overflow-x: auto;
-    border-left: none;
-    border-bottom: 2px solid var(--color-border);
-    margin-bottom: 1.8rem;
+  .exp-entry__marker {
+    left: -1.84rem;
   }
 
-  .exp-tab {
-    margin-left: 0;
-    margin-bottom: -2px;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
-  }
-
-  .exp-tab--active {
-    border-left: none;
-    border-bottom-color: var(--color-accent);
+  .exp-entry__role {
+    font-size: 1.2rem;
   }
 }

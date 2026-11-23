@@ -1,48 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 import { JOBS } from "../../data/resumeData";
 import Kicker from "../kicker/Kicker";
 import Reveal from "../reveal/Reveal";
 import "./experience.css";
 
 const Experience = () => {
-  const [active, setActive] = useState(0);
-  const job = JOBS[active];
-
   return (
     <Reveal as="section" id="experience" className="container">
       <Kicker index="03">Career</Kicker>
       <h2>Where I've worked</h2>
 
-      <div className="exp-switcher">
-        <div className="exp-tabs" role="tablist" aria-label="Work history">
-          {JOBS.map((j, i) => (
-            <button
-              key={j.company}
-              role="tab"
-              aria-selected={i === active}
-              className={`exp-tab ${i === active ? "exp-tab--active" : ""}`}
-              onClick={() => setActive(i)}
-            >
-              {j.company.split(",")[0]}
-            </button>
-          ))}
-        </div>
-
-        <div className="exp-panel" key={active}>
-          <h4 className="exp-panel__role">
-            {job.role}
-            <span className="exp-panel__at"> @ {job.company}</span>
-          </h4>
-          <div className="exp-panel__meta">
-            <span className="exp-panel__date">{job.date}</span>
-            {job.current && <span className="exp-panel__badge">Current</span>}
-          </div>
-          <ul className="exp-panel__points">
-            {job.points.map((point, j) => (
-              <li key={j}>{point}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="exp-list">
+        {JOBS.map((job, i) => (
+          <article className="exp-entry" key={job.company}>
+            <span className={`exp-entry__marker ${job.current ? "exp-entry__marker--current" : ""}`} />
+            <div className="exp-entry__head">
+              <h3 className="exp-entry__role">{job.role}</h3>
+              <div className="exp-entry__byline">
+                <span className="exp-entry__company">{job.company}</span>
+                <span className="exp-entry__location">{job.location}</span>
+                <span className="exp-entry__date">{job.date}</span>
+                {job.current && <span className="exp-entry__badge">Current</span>}
+              </div>
+            </div>
+            <p className="exp-entry__summary">{job.summary}</p>
+            {job.highlights && (
+              <ul className="exp-entry__highlights">
+                {job.highlights.map((h) => (
+                  <li key={h}>{h}</li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))}
       </div>
     </Reveal>
   );
