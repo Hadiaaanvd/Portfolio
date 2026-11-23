@@ -55,6 +55,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: var(--container-width-lg);
   margin-left: auto;
   margin-right: auto;
@@ -122,10 +123,10 @@ section {
     top: -4.75rem;
     right: 0;
     font-family: var(--font-serif);
-    font-size: 6rem;
+    font-size: 6.5rem;
     font-weight: 600;
-    color: var(--color-primary);
-    opacity: 0.06;
+    color: var(--color-accent);
+    opacity: 0.22;
     line-height: 1;
     pointer-events: none;
     user-select: none;
